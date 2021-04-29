@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr">
+
+<head>
+  <title>jQuery_projet_03_exercice_02</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid bg-primary row justify-content-center p-3">
+    <h1 class="col-12 p-4 text-center text-warning">jQuery_projet_03_exercice_02</h1>
+    <h2 class="col-9 p-4 text-center text-light">Créer deux boutons. L'un pour incrémenter; l'autre pour décrémenter. Un input récupère les valeurs.</h2>
+    <div class="offset-1 col-10 row justify-content-center">
+      <div class="row bg-warning rounded p-2 m-2">
+        <div class="offset-1 col-5 row justify-content-center bg-secondary rounded m-4">
+          <button class="btn btn-outline-warning p-3 m-3" id="increment" name="button" type="button">INCRÉMENTATION</button>
+          <button class="btn btn-outline-warning p-3 m-3" id="decrement" name="button" type="button">DÉCRÉMENTATION</button>
+        </div>
+        <div class="offset-1 col-5 row justify-content-center bg-secondary rounded m-4">
+          <input class="btn btn-outline-primary rounded m-4 text-warning" type="text" id="displayNumber" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.js">
+  </script>
+  <script>
+    var scoreOfIncrement = 0;
+    $(document).ready(function() {
+      $('#increment').click(function() {
+        scoreOfIncrement++;
+        $('#displayNumber').val(scoreOfIncrement);
+      });
+    });
+    var scoreOfDecrement = 0;
+    $(document).ready(function() {
+      $('#decrement').click(function() {
+        scoreOfDecrement--;
+        $('#displayNumber').val(scoreOfDecrement);
+      });
+    });
+  </script>
+</body>
+
+</html>
